@@ -5,7 +5,7 @@ import {
   ChevronRight, RefreshCw, LogIn, Users, FileSpreadsheet, Eye
 } from 'lucide-react';
 
-const API_BASE = 'http://localhost:8000/api'; // Django API base
+const API_BASE = 'https://expense-o64l.onrender.com'; // Django API base
 
 interface GroupMember {
   id: number;
