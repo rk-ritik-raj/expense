@@ -1,8 +1,19 @@
-import React, { useState, useEffect, useRef } from 'react';
-import { 
-  Plus, Trash2, Upload, User, DollarSign, AlertCircle, ArrowRight, 
-  Sparkles, Clock, ArrowLeftRight, CheckCircle, Calendar, Info, 
-  ChevronRight, RefreshCw, LogIn, Users, FileSpreadsheet, Eye
+// import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
+import {
+  Plus,
+  Upload,
+  DollarSign,
+  AlertCircle,
+  ArrowRight,
+  Sparkles,
+  Clock,
+  ArrowLeftRight,
+  CheckCircle,
+  RefreshCw,
+  Users,
+  FileSpreadsheet,
+  Eye
 } from 'lucide-react';
 
 const API_BASE = 'https://expense-o64l.onrender.com'; // Django API base
