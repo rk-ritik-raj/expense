@@ -1,4 +1,4 @@
-# Settled.io - Shared Expenses App
+**# Settled.io - Shared Expenses App
 
 An AI-native, premium shared expenses reconciliation app designed to clean up messy flatmate sheets, resolve currency conversions, and simplify settlements. Built for the Software Engineering Intern technical assignment.
 
@@ -72,3 +72,4 @@ The frontend is built using Vite.
 - **Rohan's Ledger**: Clicking any member's balance displays a detailed modal detailing the exact items and formulas that make up the balance (No magic numbers!).
 - **Meera's Interactive CSV Importer**: An ingestion interface highlighting all 12 CSV data anomalies, allowing approval, custom correction, or exclusion on a row-by-row level before DB write.
 - **Timeline Constraints (Sam & Meera)**: Membership date bounds are enforced automatically. Sam (joined mid-April) is not charged for March electricity, and Meera (left end of March) does not split April/May items.
+**
