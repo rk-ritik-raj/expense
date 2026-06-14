@@ -148,3 +148,53 @@ class BalancesTestCase(TestCase):
         ledger = get_detailed_ledger(self.group, 'rohan')
         self.assertEqual(ledger['calculated_balance'], -2000.0)
         self.assertEqual(len(ledger['ledger_items']), 2) # 1 expense split + 1 payment sent
+
+from django.urls import reverse
+
+class APIViewsTestCase(TestCase):
+    def setUp(self):
+        self.group = Group.objects.create(name="Test Group")
+        self.user_aisha = User.objects.create(username="aisha")
+        self.user_rohan = User.objects.create(username="rohan")
+        GroupMembership.objects.create(group=self.group, user=self.user_aisha, joined_at=datetime.date(2026, 2, 1))
+        GroupMembership.objects.create(group=self.group, user=self.user_rohan, joined_at=datetime.date(2026, 2, 1))
+
+    def test_group_list_create(self):
+        # Test GET groups
+        response = self.client.get(reverse('groups'))
+        self.assertEqual(response.status_code, 200)
+        self.assertEqual(len(response.json()), 1)
+
+        # Test POST create group
+        response = self.client.post(reverse('groups'), {'name': 'New Group'}, content_type='application/json')
+        self.assertEqual(response.status_code, 201)
+        self.assertEqual(Group.objects.count(), 2)
+
+    def test_expense_list_create(self):
+        # Create an expense
+        expense = Expense.objects.create(
+            group=self.group,
+            paid_by=self.user_aisha,
+            description="Dinner",
+            amount=Decimal("100.00"),
+            original_amount=Decimal("100.00"),
+            date=datetime.date(2026, 2, 1)
+        )
+        ExpenseSplit.objects.create(
+            expense=expense,
+            user=self.user_aisha,
+            amount_owed=Decimal("50.00")
+        )
+        ExpenseSplit.objects.create(
+            expense=expense,
+            user=self.user_rohan,
+            amount_owed=Decimal("50.00")
+        )
+
+        # Test GET expenses
+        response = self.client.get(reverse('expenses', args=[self.group.id]))
+        self.assertEqual(response.status_code, 200)
+        data = response.json()
+        self.assertEqual(len(data), 1)
+        self.assertEqual(data[0]['description'], "Dinner")
+

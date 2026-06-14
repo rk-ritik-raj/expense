@@ -116,7 +116,7 @@ class LedgerView(APIView):
 class ExpenseCreateView(APIView):
     def get(self, request, group_id):
         group = get_object_or_404(Group, id=group_id)
-        expenses = Expense.objects.filter(group=group).order_selection = ('-date', '-id')
+        expenses = Expense.objects.filter(group=group).order_by('-date', '-id')
         # Simple serialization
         data = []
         for exp in expenses:

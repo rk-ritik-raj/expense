@@ -16,7 +16,9 @@ import {
   Eye
 } from 'lucide-react';
 
-const API_BASE = 'https://expense-o64l.onrender.com'; // Django API base
+const API_BASE = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
+  ? 'http://localhost:8000/api'
+  : 'https://expense-o64l.onrender.com/api'; // Django API base
 
 interface GroupMember {
   id: number;
