@@ -1,0 +1,14 @@
+Date,Description,Amount,Paid By,Aisha,Rohan,Priya,Meera,Sam,Dev,Currency
+2026-02-01,February Rent,12000,Aisha,1,1,1,1,0,0,INR
+2026-02-01,February Rent,12000,Aisha,1,1,1,1,0,0,INR
+12/02/2026,Inconsistent Date Groceries,₹1500,Rohan,1,1,1,1,0,0,INR
+2026-02-18,Internet Bill Refund,-600,Priya,1,1,1,1,0,0,INR
+2026-02-25,Settlement Rohan to Aisha,1000,Rohan,1,0,0,0,0,0,INR
+2026-03-05,Dinner Party,1500,Aisha,1,1,1,1,0,0,INR
+2026-03-05,Dinner Party,1600,Rohan,1,1,1,1,0,0,INR
+10-03-2026,USD Dinner during trip,40,Priya,1,1,1,1,0,1,USD
+2026-03-15,March Electricity,2000,Aisha,1,1,1,1,1,0,INR
+2026-04-25,April Groceries,1500,Rohan,1,1,1,1,1,0,INR
+2026-05-10,Trip Cab,80,Dev,1,1,1,0,1,1,USD
+2026-05-15,Percentage Split Lunch,3000,Priya,30%,30%,30%,0,0,0,INR
+2026-05-20,Aisha Personal Coffee,150,Aisha,1,0,0,0,0,0,INR

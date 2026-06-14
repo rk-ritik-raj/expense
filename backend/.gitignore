@@ -1,0 +1,72 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.venv/
+
+# Django
+*.log
+db.sqlite3
+db.sqlite3-journal
+media/
+
+# Environment Variables
+.env
+.env.*
+
+# Migrations (optional)
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Static Files
+staticfiles/
+
+# IDE
+.vscode/
+.idea/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Testing
+.coverage
+htmlcov/
+.pytest_cache/
+
+# Build
+build/
+dist/
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# mypy
+.mypy_cache/
+
+# PyCharm
+*.iml
+
+# Logs
+logs/
+*.log
+
+# Node Modules (if frontend exists)
+node_modules/
+
+# Next.js (if frontend exists)
+.next/
+out/
+
+# Uploads
+uploads/
+
+# Cache
+.cache/
