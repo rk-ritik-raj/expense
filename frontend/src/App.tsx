@@ -59,7 +59,7 @@ interface CSVRow {
     Date: string;
     Description: string;
     Amount: string;
-    "Paid By": string;;
+    "Paid By": string;
     Currency: string;
     splits: Record<string, string>;
   };
@@ -68,7 +68,7 @@ interface CSVRow {
     Date: string;
     Description: string;
     Amount: string;
-    "Paid By": string;;
+    "Paid By": string;
     Currency: string;
     original_currency: string;
     original_amount: string;
